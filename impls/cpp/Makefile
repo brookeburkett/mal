@@ -1,10 +1,5 @@
-CC=gcc
-CLFAGS= -Wall -Werror -Wextra 
+CXX=c++
+CXXFLAGS=-g -Wall -MMD -std=c++17
 
-MAINS=$(wildcard step*.cpp)
-TARGETS=$(MAINS:%.cpp=%)
-.PHONY: all clean
-.SUFFIXES: .cpp .o
-
-all: $(TARGETS)
-
+step0_repl: step0_repl.cpp
+	$(CXX) $(CXXFLAGS) -o step0_repl step0_repl.cpp
